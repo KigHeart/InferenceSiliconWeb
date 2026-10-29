@@ -1,0 +1,6 @@
+{
+  "name": "Advanced Inference Silicon Investors Forum - Accra 2027",
+  "description": "Official portal for the Advanced Inference Silicon Investors Forum in Accra, Ghana (3–5 March 2027). Connecting global capital, silicon architecture, African critical minerals, and compute infrastructure.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
