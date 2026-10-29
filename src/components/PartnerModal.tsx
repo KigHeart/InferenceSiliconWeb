@@ -89,7 +89,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({
               </div>
               <h3 className="text-2xl font-bold text-stone-900">Enquiry Received</h3>
               <p className="text-sm text-stone-600 max-w-md mx-auto">
-                Thank you for your interest in backing the Advanced Inference Silicon Forum. Our partnerships team (chaired by Kiprop Yego & Michael Apasiku) will review your requirements and reach out within 24 hours with the detailed sponsorship prospectus.
+                Thank you for your interest in backing the Advanced Inference Silicon Forum. Our partnerships team (chaired by Kiprop Yego & Dr. Michael Apasiku) will review your requirements and reach out within 24 hours with the detailed sponsorship prospectus.
               </p>
               <button
                 onClick={onClose}
