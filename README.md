@@ -52,7 +52,7 @@ git push origin main
 
 ## 🛠️ Included in this Release
 - **Fidelity to PDF:** Velvet burgundy color palette (`#82163b`), custom silicon die schematic, 125/79 days countdown.
-- **Editorial Copy:** Conveners bar (Kiprop Yego & Dr. Michael Apasiku), *"Inference is decided by silicon"*, 4 Africa's Advantage cards.
+- **Editorial Copy:** Conveners bar (Kiprop Yego & Dr. Dr. Michael Apasiku), *"Inference is decided by silicon"*, 4 Africa's Advantage cards.
 - **Interactivity:** 3-Day interactive Programme schedule, passes selection (Day, Delegate, Investor Full Access, Institutional Table), simulated checkout & digital pass generation.
 - **High-Definition Imagery & Video:** Macro AI inference silicon wafer hero photography with interactive video teaser modal.
 - **Full-Stack & Static:** Runs on Express backend with REST APIs (`/api/register`, `/api/partner`, `/api/health`) AND compiles directly into static distribution for GitHub Pages.

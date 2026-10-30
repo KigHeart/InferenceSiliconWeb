@@ -130,7 +130,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <div className="text-xs text-stone-400">Chairman, Tilil Engineering Group</div>
               </div>
               <div>
-                <div className="font-semibold text-white">Dr. Michael Apasiku</div>
+                <div className="font-semibold text-white">Dr. Dr. Michael Apasiku</div>
                 <div className="text-xs text-stone-400">Nelix Chip Design</div>
               </div>
             </div>
