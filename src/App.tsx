@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -62,7 +62,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf7f7] text-[#1c1917] flex flex-col font-sans selection:bg-[#82163b] selection:text-white">
+    <div className="min-h-screen bg-[#faf7f7] text-[#1c1917] flex flex-col font-sans selection:bg-[#0f254e] selection:text-white">
       
       {/* 1. Header (Sticky navigation, logo, register CTA) */}
       <Header
@@ -154,7 +154,7 @@ export default function App() {
 
       <div className="fixed bottom-6 right-6 z-40">
         <a
-          className="inline-flex items-center gap-2.5 px-4 py-2.5 bg-stone-900/95 hover:bg-[#82163b] text-white rounded-full shadow-2xl border border-white/20 backdrop-blur-md text-xs font-bold hover:scale-105 transition-all group"
+          className="inline-flex items-center gap-2.5 px-4 py-2.5 bg-stone-900/95 hover:bg-[#0f254e] text-white rounded-full shadow-2xl border border-white/20 backdrop-blur-md text-xs font-bold hover:scale-105 transition-all group"
           title="Download latest updated ZIP for GitHub deployment"
         >
           <div className="w-5 h-5 rounded-full bg-white/20 text-white flex items-center justify-center">

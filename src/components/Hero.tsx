@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+﻿import React, { useMemo } from 'react';
 import { Play } from 'lucide-react';
 import { FORUM_CONFIG } from '../data/forumData';
 import heroPhotoUrl from '../assets/images/hero_silicon_inference_1793309657830.jpg';
@@ -19,7 +19,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onOpenPartner, onOpe
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-[#781335] text-white pt-12 pb-20 lg:pt-20 lg:pb-28">
+    <section className="relative overflow-hidden bg-[#0a1931] text-white pt-12 pb-20 lg:pt-20 lg:pb-28">
       
       {/* Background High-Fidelity Silicon Photo with Measured Rich Burgundy Scrim */}
       <div className="absolute inset-0 z-0">
@@ -30,8 +30,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onOpenPartner, onOpe
           className="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity scale-105"
         />
         {/* Measured Scrim Gradient ensuring WCAG AA contrast for text */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#82163b] via-[#781335]/95 to-[#4e0821]/90" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#4e0821] via-transparent to-transparent opacity-80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f254e] via-[#0a1931]/95 to-[#060d1a]/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#060d1a] via-transparent to-transparent opacity-80" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,7 +55,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onOpenPartner, onOpe
             </h1>
 
             {/* Dates in Rose tone */}
-            <div className="text-2xl sm:text-3xl font-bold text-[#fbcfe8] tracking-tight">
+            <div className="text-2xl sm:text-3xl font-bold text-[#93c5fd] tracking-tight">
               3–5 March 2027
             </div>
 
@@ -68,7 +68,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onOpenPartner, onOpe
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <button
                 onClick={onOpenRegister}
-                className="px-7 py-3 text-sm sm:text-base font-semibold text-[#82163b] bg-white hover:bg-[#fff0f4] rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 cursor-pointer whitespace-nowrap"
+                className="px-7 py-3 text-sm sm:text-base font-semibold text-[#0f254e] bg-white hover:bg-[#eff6ff] rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 cursor-pointer whitespace-nowrap"
               >
                 Register now
               </button>
@@ -83,9 +83,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onOpenPartner, onOpe
               {/* Watch Video Teaser Button */}
               <button
                 onClick={onOpenVideo}
-                className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-[#fbcfe8] hover:text-white bg-white/5 hover:bg-white/15 border border-white/20 rounded-full transition-all cursor-pointer whitespace-nowrap"
+                className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-[#93c5fd] hover:text-white bg-white/5 hover:bg-white/15 border border-white/20 rounded-full transition-all cursor-pointer whitespace-nowrap"
               >
-                <div className="w-5 h-5 rounded-full bg-[#f43f5e] flex items-center justify-center text-white shadow-xs">
+                <div className="w-5 h-5 rounded-full bg-[#38bdf8] flex items-center justify-center text-white shadow-xs">
                   <Play className="w-2.5 h-2.5 fill-white ml-0.5" />
                 </div>
                 <span>Watch Video</span>
@@ -111,32 +111,32 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onOpenPartner, onOpe
                 xmlns="http://www.w3.org/2000/svg"
               >
                 {/* Outer Pin lines - Top */}
-                <line x1="100" y1="20" x2="100" y2="60" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="130" y1="20" x2="130" y2="60" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="160" y1="20" x2="160" y2="60" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="190" y1="20" x2="190" y2="60" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="220" y1="20" x2="220" y2="60" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="100" y1="20" x2="100" y2="60" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="130" y1="20" x2="130" y2="60" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="160" y1="20" x2="160" y2="60" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="190" y1="20" x2="190" y2="60" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="220" y1="20" x2="220" y2="60" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
 
                 {/* Outer Pin lines - Bottom */}
-                <line x1="100" y1="260" x2="100" y2="300" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="130" y1="260" x2="130" y2="300" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="160" y1="260" x2="160" y2="300" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="190" y1="260" x2="190" y2="300" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="220" y1="260" x2="220" y2="300" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="100" y1="260" x2="100" y2="300" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="130" y1="260" x2="130" y2="300" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="160" y1="260" x2="160" y2="300" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="190" y1="260" x2="190" y2="300" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="220" y1="260" x2="220" y2="300" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
 
                 {/* Outer Pin lines - Left */}
-                <line x1="20" y1="100" x2="60" y2="100" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="20" y1="130" x2="60" y2="130" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="20" y1="160" x2="60" y2="160" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="20" y1="190" x2="60" y2="190" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="20" y1="220" x2="60" y2="220" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="20" y1="100" x2="60" y2="100" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="20" y1="130" x2="60" y2="130" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="20" y1="160" x2="60" y2="160" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="20" y1="190" x2="60" y2="190" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="20" y1="220" x2="60" y2="220" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
 
                 {/* Outer Pin lines - Right */}
-                <line x1="260" y1="100" x2="300" y2="100" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="260" y1="130" x2="300" y2="130" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="260" y1="160" x2="300" y2="160" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="260" y1="190" x2="300" y2="190" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="260" y1="220" x2="300" y2="220" stroke="#f497b4" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="260" y1="100" x2="300" y2="100" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="260" y1="130" x2="300" y2="130" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="260" y1="160" x2="300" y2="160" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="260" y1="190" x2="300" y2="190" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
+                <line x1="260" y1="220" x2="300" y2="220" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" />
 
                 {/* Outer Chip Package Boundary */}
                 <rect 
@@ -147,7 +147,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onOpenPartner, onOpe
                   rx="6" 
                   stroke="#f8a2bc" 
                   strokeWidth="3.5" 
-                  fill="#781335" 
+                  fill="#0a1931" 
                   fillOpacity="0.45"
                 />
 
@@ -158,7 +158,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onOpenPartner, onOpe
                   width="128" 
                   height="128" 
                   rx="4" 
-                  stroke="#f497b4" 
+                  stroke="#60a5fa" 
                   strokeWidth="2" 
                   strokeDasharray="4 2"
                   fill="#5c0e27"
@@ -168,14 +168,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onOpenPartner, onOpe
                 {/* Circuit Traces & Nodes inside Die */}
                 <path 
                   d="M120 145 H145 V170 H180 V140" 
-                  stroke="#fbcfe8" 
+                  stroke="#93c5fd" 
                   strokeWidth="2" 
                   strokeLinecap="round" 
                   className="circuit-pulse"
                 />
                 <path 
                   d="M195 185 H165 V200 H135" 
-                  stroke="#fbcfe8" 
+                  stroke="#93c5fd" 
                   strokeWidth="2" 
                   strokeLinecap="round" 
                 />
@@ -195,7 +195,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onOpenPartner, onOpe
                   height="36" 
                   rx="3" 
                   fill="#9e1c47" 
-                  stroke="#fbcfe8" 
+                  stroke="#93c5fd" 
                   strokeWidth="2"
                 />
                 <circle cx="160" cy="160" r="5" fill="#ffffff" />
@@ -207,7 +207,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onOpenPartner, onOpe
                 title="Play Forum Video Preview"
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
               >
-                <div className="w-16 h-16 rounded-full bg-[#82163b]/90 text-white flex items-center justify-center shadow-xl border border-white/40 transform hover:scale-110 transition-transform">
+                <div className="w-16 h-16 rounded-full bg-[#0f254e]/90 text-white flex items-center justify-center shadow-xl border border-white/40 transform hover:scale-110 transition-transform">
                   <Play className="w-6 h-6 fill-white ml-0.5" />
                 </div>
               </button>
@@ -230,7 +230,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onOpenPartner, onOpe
 
               {/* Right Stat: Early bird deadline */}
               <div className="pl-4 space-y-0.5">
-                <div className="text-xs font-semibold text-[#fbcfe8] uppercase tracking-wide">
+                <div className="text-xs font-semibold text-[#93c5fd] uppercase tracking-wide">
                   Early bird
                 </div>
                 <div className="text-sm font-medium text-white/95">

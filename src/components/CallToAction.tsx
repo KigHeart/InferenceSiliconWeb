@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 interface CallToActionProps {
   onOpenRegister: () => void;
@@ -6,7 +6,7 @@ interface CallToActionProps {
 
 export const CallToAction: React.FC<CallToActionProps> = ({ onOpenRegister }) => {
   return (
-    <section className="bg-gradient-to-r from-[#82163b] via-[#751132] to-[#4e0821] text-white py-16 sm:py-20">
+    <section className="bg-gradient-to-r from-[#0f254e] via-[#0a1931] to-[#060d1a] text-white py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           
@@ -22,7 +22,7 @@ export const CallToAction: React.FC<CallToActionProps> = ({ onOpenRegister }) =>
           <div className="shrink-0">
             <button
               onClick={onOpenRegister}
-              className="px-8 py-3.5 text-base font-bold text-[#82163b] bg-white hover:bg-[#fff0f4] rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 cursor-pointer whitespace-nowrap"
+              className="px-8 py-3.5 text-base font-bold text-[#0f254e] bg-white hover:bg-[#eff6ff] rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 cursor-pointer whitespace-nowrap"
             >
               Register now
             </button>

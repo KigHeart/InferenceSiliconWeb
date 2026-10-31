@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { X, MapPin, Plane, Shield, HelpCircle, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 import { FAQS } from '../data/forumData';
 
@@ -17,9 +17,9 @@ export const VenueFaqModal: React.FC<VenueFaqModalProps> = ({ isOpen, onClose })
       <div className="relative w-full max-w-3xl bg-white text-stone-900 rounded-3xl shadow-2xl border border-stone-200 overflow-hidden my-6 text-left flex flex-col max-h-[90vh]">
         
         {/* Header */}
-        <div className="bg-[#82163b] text-white px-6 py-5 flex items-center justify-between shrink-0">
+        <div className="bg-[#0f254e] text-white px-6 py-5 flex items-center justify-between shrink-0">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#fbcfe8]">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#93c5fd]">
               LOGISTICS & DELEGATE INFORMATION
             </span>
             <h2 className="text-xl font-extrabold text-white">
@@ -48,7 +48,7 @@ export const VenueFaqModal: React.FC<VenueFaqModalProps> = ({ isOpen, onClose })
               
               {/* Venue 1 */}
               <div className="p-5 bg-stone-50 rounded-2xl border border-stone-200 space-y-2">
-                <div className="w-9 h-9 rounded-xl bg-[#fae8ee] flex items-center justify-center text-[#82163b]">
+                <div className="w-9 h-9 rounded-xl bg-[#eff6ff] flex items-center justify-center text-[#0f254e]">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <h4 className="text-base font-bold text-stone-900">
@@ -57,14 +57,14 @@ export const VenueFaqModal: React.FC<VenueFaqModalProps> = ({ isOpen, onClose })
                 <p className="text-xs text-stone-600 leading-relaxed">
                   Castle Road, Osu, Accra. Home to the Opening Plenary, Hardware Expo, and Technical Accelerators Track (3–4 March).
                 </p>
-                <div className="text-[11px] font-semibold text-[#82163b]">
+                <div className="text-[11px] font-semibold text-[#0f254e]">
                   15 min from Kotoka International Airport (ACC)
                 </div>
               </div>
 
               {/* Venue 2 */}
               <div className="p-5 bg-stone-50 rounded-2xl border border-stone-200 space-y-2">
-                <div className="w-9 h-9 rounded-xl bg-[#fae8ee] flex items-center justify-center text-[#82163b]">
+                <div className="w-9 h-9 rounded-xl bg-[#eff6ff] flex items-center justify-center text-[#0f254e]">
                   <Shield className="w-5 h-5" />
                 </div>
                 <h4 className="text-base font-bold text-stone-900">
@@ -73,7 +73,7 @@ export const VenueFaqModal: React.FC<VenueFaqModalProps> = ({ isOpen, onClose })
                 <p className="text-xs text-stone-600 leading-relaxed">
                   No 1 Labadi Bypass, Accra. VIP Deal Room, Sovereign Capital Roundtables & Closing Accra Declaration Gala Dinner (5 March).
                 </p>
-                <div className="text-[11px] font-semibold text-[#82163b]">
+                <div className="text-[11px] font-semibold text-[#0f254e]">
                   Private beachfront pavilion & bilateral meeting suites
                 </div>
               </div>
@@ -82,8 +82,8 @@ export const VenueFaqModal: React.FC<VenueFaqModalProps> = ({ isOpen, onClose })
           </div>
 
           {/* Travel & Visa Section */}
-          <div className="p-5 bg-[#fae8ee]/40 rounded-2xl border border-[#fae8ee] space-y-2">
-            <div className="flex items-center gap-2 text-sm font-bold text-[#82163b]">
+          <div className="p-5 bg-[#eff6ff]/40 rounded-2xl border border-[#eff6ff] space-y-2">
+            <div className="flex items-center gap-2 text-sm font-bold text-[#0f254e]">
               <Plane className="w-4 h-4" />
               <span>International Travel & Visa on Arrival</span>
             </div>
@@ -134,7 +134,7 @@ export const VenueFaqModal: React.FC<VenueFaqModalProps> = ({ isOpen, onClose })
         <div className="bg-stone-50 px-6 py-4 border-t border-stone-200 flex justify-end">
           <button
             onClick={onClose}
-            className="px-6 py-2 text-xs font-bold text-white bg-[#82163b] hover:bg-[#660f2c] rounded-full transition-colors cursor-pointer"
+            className="px-6 py-2 text-xs font-bold text-white bg-[#0f254e] hover:bg-[#0a1931] rounded-full transition-colors cursor-pointer"
           >
             Close
           </button>

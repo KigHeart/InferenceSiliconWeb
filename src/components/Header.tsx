@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 interface HeaderProps {
@@ -16,7 +16,7 @@ export const Header: React.FC<HeaderProps> = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-[#82163b] text-white border-b border-[#9c274d]/40 shadow-xs backdrop-blur-md">
+    <header className="sticky top-0 z-40 w-full bg-[#0f254e] text-white border-b border-[#9c274d]/40 shadow-xs backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 gap-8">
           
@@ -75,7 +75,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="hidden sm:flex items-center gap-3 shrink-0">
             <button
               onClick={onOpenRegister}
-              className="px-6 py-2.5 text-sm font-semibold text-[#82163b] bg-white hover:bg-[#fff0f4] rounded-full shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5 cursor-pointer whitespace-nowrap"
+              className="px-6 py-2.5 text-sm font-semibold text-[#0f254e] bg-white hover:bg-[#eff6ff] rounded-full shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5 cursor-pointer whitespace-nowrap"
             >
               Register
             </button>
@@ -85,7 +85,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center gap-2 sm:hidden">
             <button
               onClick={onOpenRegister}
-              className="px-4 py-1.5 text-xs font-semibold text-[#82163b] bg-white rounded-full"
+              className="px-4 py-1.5 text-xs font-semibold text-[#0f254e] bg-white rounded-full"
             >
               Register
             </button>

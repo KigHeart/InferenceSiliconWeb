@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { WHO_IN_THE_ROOM } from '../data/forumData';
 
 export const WhoWillBeInRoom: React.FC = () => {
@@ -8,7 +8,7 @@ export const WhoWillBeInRoom: React.FC = () => {
         
         {/* Kicker */}
         <div className="mb-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#82163b]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#0f254e]">
             WHO WILL BE IN THE ROOM
           </span>
         </div>
@@ -40,7 +40,7 @@ export const WhoWillBeInRoom: React.FC = () => {
               </div>
 
               <div className="pt-3 border-t border-stone-100 text-[13px] text-stone-500 font-medium">
-                <span className="text-[#82163b] font-semibold">Key agenda:</span> {item.focus}
+                <span className="text-[#0f254e] font-semibold">Key agenda:</span> {item.focus}
               </div>
             </div>
           ))}

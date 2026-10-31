@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { ArrowUp } from 'lucide-react';
 import { FORUM_CONFIG } from '../data/forumData';
 import { SocialLinks } from './SocialLinks';
@@ -42,7 +42,7 @@ export const Footer: React.FC<FooterProps> = ({
 
             {/* Social Media Link Component */}
             <div className="pt-2 space-y-2.5">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#fbcfe8] block">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#93c5fd] block">
                 Official Network & Channels
               </span>
               <SocialLinks layout="inline" />
@@ -51,7 +51,7 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Column 2: Forum Navigation Links */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#f497b4]">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-[#60a5fa]">
               FORUM
             </h4>
             <ul className="space-y-2 text-sm text-stone-300">
@@ -93,7 +93,7 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Column 3: Contact Details */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#f497b4]">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-[#60a5fa]">
               CONTACT
             </h4>
             <div className="space-y-2 text-sm text-stone-300">
@@ -121,7 +121,7 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Column 4: Convened By */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#f497b4]">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-[#60a5fa]">
               CONVENED BY
             </h4>
             <div className="space-y-3 text-sm text-stone-300">

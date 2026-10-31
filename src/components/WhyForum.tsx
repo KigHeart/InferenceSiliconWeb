@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 export const WhyForum: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ export const WhyForum: React.FC = () => {
         
         {/* Section Kicker */}
         <div className="mb-6 text-left">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#82163b]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#0f254e]">
             WHY THIS FORUM, AND WHY NOW
           </span>
         </div>

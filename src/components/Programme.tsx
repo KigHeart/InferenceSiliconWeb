@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { ArrowRight, Calendar } from 'lucide-react';
 import { PROGRAMME_DAYS } from '../data/forumData';
 
@@ -55,7 +55,7 @@ export const Programme: React.FC<ProgrammeProps> = ({ onOpenFullProgramme }) => 
                 <div className="space-y-8">
                   {day.subThemes.map((sub, sIdx) => (
                     <div key={sIdx} className="space-y-2">
-                      <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-[#fbcfe8] transition-colors">
+                      <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-[#93c5fd] transition-colors">
                         {sub.title}
                       </h3>
                       <p className="text-sm text-stone-300 leading-relaxed font-normal">

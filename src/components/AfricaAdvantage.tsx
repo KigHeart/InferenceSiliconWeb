@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Gem, Zap, Users, MessageSquareQuote, ChevronDown, ChevronUp } from 'lucide-react';
 import { AFRICA_ADVANTAGES } from '../data/forumData';
 
@@ -26,7 +26,7 @@ export const AfricaAdvantage: React.FC = () => {
         
         {/* Kicker */}
         <div className="mb-8 text-left">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#82163b]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#0f254e]">
             AFRICA’S ADVANTAGE
           </span>
         </div>
@@ -42,7 +42,7 @@ export const AfricaAdvantage: React.FC = () => {
               >
                 <div>
                   {/* Icon */}
-                  <div className="w-12 h-12 rounded-xl bg-[#fae8ee] flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-[#eff6ff] flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                     {getIcon(adv.id)}
                   </div>
 
@@ -68,7 +68,7 @@ export const AfricaAdvantage: React.FC = () => {
                 <div className="mt-6 pt-3">
                   <button
                     onClick={() => setExpandedId(isExpanded ? null : adv.id)}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#82163b] hover:text-[#540921] transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0f254e] hover:text-[#0a1931] transition-colors cursor-pointer"
                   >
                     <span>{isExpanded ? 'Less' : 'Learn more'}</span>
                     {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}

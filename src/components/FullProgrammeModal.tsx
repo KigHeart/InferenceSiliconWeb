@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { X, Calendar, Clock, MapPin, User, ChevronRight, Download } from 'lucide-react';
 import { PROGRAMME_DAYS } from '../data/forumData';
 
@@ -44,9 +44,9 @@ ${d.sessions.map((s) => `[${s.time}] ${s.title}\nLocation: ${s.location}\n${s.de
       <div className="relative w-full max-w-4xl bg-stone-900 text-white rounded-3xl shadow-2xl border border-white/10 overflow-hidden my-6 text-left flex flex-col max-h-[90vh]">
         
         {/* Modal Header */}
-        <div className="bg-[#82163b] px-6 py-5 flex items-center justify-between shrink-0">
+        <div className="bg-[#0f254e] px-6 py-5 flex items-center justify-between shrink-0">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#fbcfe8]">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#93c5fd]">
               COMPLETE FORUM AGENDA
             </span>
             <h2 className="text-xl font-extrabold text-white">
@@ -60,7 +60,7 @@ ${d.sessions.map((s) => `[${s.time}] ${s.title}\nLocation: ${s.location}\n${s.de
               title="Download text agenda"
               className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white/90 bg-white/10 hover:bg-white/20 rounded-full border border-white/20 transition-colors cursor-pointer"
             >
-              <Download className="w-3.5 h-3.5 text-[#f9a8d4]" />
+              <Download className="w-3.5 h-3.5 text-[#60a5fa]" />
               <span>Export Agenda</span>
             </button>
 
@@ -81,7 +81,7 @@ ${d.sessions.map((s) => `[${s.time}] ${s.title}\nLocation: ${s.location}\n${s.de
               onClick={() => setActiveDayIdx(idx)}
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2.5 transition-all cursor-pointer whitespace-nowrap ${
                 activeDayIdx === idx
-                  ? 'bg-[#82163b] text-white shadow-md'
+                  ? 'bg-[#0f254e] text-white shadow-md'
                   : 'bg-white/5 text-stone-400 hover:text-white hover:bg-white/10'
               }`}
             >
@@ -152,7 +152,7 @@ ${d.sessions.map((s) => `[${s.time}] ${s.title}\nLocation: ${s.location}\n${s.de
                           key={spkIdx}
                           className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-stone-300"
                         >
-                          <User className="w-3 h-3 text-[#f9a8d4]" />
+                          <User className="w-3 h-3 text-[#60a5fa]" />
                           <span className="font-semibold text-white">{spk.name}</span>
                           <span className="text-stone-500">· {spk.company}</span>
                         </div>
@@ -173,7 +173,7 @@ ${d.sessions.map((s) => `[${s.time}] ${s.title}\nLocation: ${s.location}\n${s.de
           </span>
           <button
             onClick={onClose}
-            className="px-6 py-2 text-xs font-bold text-white bg-[#82163b] hover:bg-[#660f2c] rounded-full transition-colors cursor-pointer"
+            className="px-6 py-2 text-xs font-bold text-white bg-[#0f254e] hover:bg-[#0a1931] rounded-full transition-colors cursor-pointer"
           >
             Close Agenda
           </button>

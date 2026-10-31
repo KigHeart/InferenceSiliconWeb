@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { X, CheckCircle, ShieldCheck, CreditCard, Building2, Smartphone, QrCode, ArrowRight, Download, Ticket } from 'lucide-react';
 import { PASSES } from '../data/forumData';
 import { PassType, RegistrationSubmission } from '../types';
@@ -87,10 +87,10 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
       <div className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-stone-200 overflow-hidden my-8 text-left animate-fadeIn">
         
         {/* Header */}
-        <div className="bg-[#82163b] text-white px-6 py-5 flex items-center justify-between">
+        <div className="bg-[#0f254e] text-white px-6 py-5 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-white/10 rounded-xl">
-              <Ticket className="w-5 h-5 text-[#fbcfe8]" />
+              <Ticket className="w-5 h-5 text-[#93c5fd]" />
             </div>
             <div>
               <h2 className="text-lg font-bold">Register for Accra Forum</h2>
@@ -126,12 +126,12 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                       onClick={() => setSelectedPass(pass.id)}
                       className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                         selectedPass === pass.id
-                          ? 'border-[#82163b] bg-[#fae8ee]/70 ring-1 ring-[#82163b]'
+                          ? 'border-[#0f254e] bg-[#eff6ff]/70 ring-1 ring-[#0f254e]'
                           : 'border-stone-200 hover:border-stone-300 bg-white'
                       }`}
                     >
                       <div className="text-xs font-bold text-stone-900 truncate">{pass.name}</div>
-                      <div className="text-sm font-black text-[#82163b] font-mono-numbers">
+                      <div className="text-sm font-black text-[#0f254e] font-mono-numbers">
                         ${pass.priceUSD}
                       </div>
                     </button>
@@ -145,7 +145,7 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                   <span className="font-bold text-stone-900">{currentPass.name}: </span>
                   <span>{currentPass.description}</span>
                 </div>
-                <span className="font-extrabold text-[#82163b] text-base shrink-0 ml-3 font-mono-numbers">
+                <span className="font-extrabold text-[#0f254e] text-base shrink-0 ml-3 font-mono-numbers">
                   USD ${currentPass.priceUSD}
                 </span>
               </div>
@@ -162,7 +162,7 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                     placeholder="e.g. Kwame Mensah"
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-[#82163b] focus:ring-1 focus:ring-[#82163b] text-sm outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-[#0f254e] focus:ring-1 focus:ring-[#0f254e] text-sm outline-none"
                   />
                 </div>
 
@@ -176,7 +176,7 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                     placeholder="kwame@enterprise.org"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-[#82163b] focus:ring-1 focus:ring-[#82163b] text-sm outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-[#0f254e] focus:ring-1 focus:ring-[#0f254e] text-sm outline-none"
                   />
                 </div>
 
@@ -190,7 +190,7 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                     placeholder="e.g. Volta Silicon Labs"
                     value={formData.organization}
                     onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-[#82163b] focus:ring-1 focus:ring-[#82163b] text-sm outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-[#0f254e] focus:ring-1 focus:ring-[#0f254e] text-sm outline-none"
                   />
                 </div>
 
@@ -203,7 +203,7 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                     placeholder="e.g. Managing Director / Chip Architect"
                     value={formData.jobTitle}
                     onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-[#82163b] focus:ring-1 focus:ring-[#82163b] text-sm outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-[#0f254e] focus:ring-1 focus:ring-[#0f254e] text-sm outline-none"
                   />
                 </div>
 
@@ -216,7 +216,7 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                     placeholder="e.g. Ghana, Kenya, South Africa, USA, UK"
                     value={formData.country}
                     onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-[#82163b] focus:ring-1 focus:ring-[#82163b] text-sm outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-[#0f254e] focus:ring-1 focus:ring-[#0f254e] text-sm outline-none"
                   />
                 </div>
 
@@ -229,7 +229,7 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                     placeholder="+233 24 123 4567"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-[#82163b] focus:ring-1 focus:ring-[#82163b] text-sm outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-[#0f254e] focus:ring-1 focus:ring-[#0f254e] text-sm outline-none"
                   />
                 </div>
               </div>
@@ -243,7 +243,7 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                   placeholder="Optional details for our hospitality and protocol team..."
                   value={formData.dietaryOrAccessibility}
                   onChange={(e) => setFormData({ ...formData, dietaryOrAccessibility: e.target.value })}
-                  className="w-full px-3.5 py-2 rounded-xl border border-stone-300 focus:border-[#82163b] focus:ring-1 focus:ring-[#82163b] text-sm outline-none"
+                  className="w-full px-3.5 py-2 rounded-xl border border-stone-300 focus:border-[#0f254e] focus:ring-1 focus:ring-[#0f254e] text-sm outline-none"
                 />
               </div>
 
@@ -257,7 +257,7 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                 </button>
                 <button
                   type="submit"
-                  className="px-7 py-2.5 text-sm font-bold text-white bg-[#82163b] hover:bg-[#660f2c] rounded-full shadow-md hover:shadow-lg transition-all flex items-center gap-2 cursor-pointer"
+                  className="px-7 py-2.5 text-sm font-bold text-white bg-[#0f254e] hover:bg-[#0a1931] rounded-full shadow-md hover:shadow-lg transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <span>Continue to Payment</span>
                   <ArrowRight className="w-4 h-4" />
@@ -275,7 +275,7 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                 <div className="text-xs uppercase font-bold text-stone-500 mb-1">Order Summary</div>
                 <div className="flex justify-between items-center text-sm font-semibold text-stone-900">
                   <span>{currentPass.name} ({formData.fullName})</span>
-                  <span className="text-lg font-bold text-[#82163b] font-mono-numbers">
+                  <span className="text-lg font-bold text-[#0f254e] font-mono-numbers">
                     USD ${currentPass.priceUSD}
                   </span>
                 </div>
@@ -296,11 +296,11 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                     onClick={() => setFormData({ ...formData, paymentMethod: 'credit_card' })}
                     className={`p-4 rounded-xl border flex flex-col items-center justify-center text-center gap-2 transition-all cursor-pointer ${
                       formData.paymentMethod === 'credit_card'
-                        ? 'border-[#82163b] bg-[#fae8ee]/60 ring-1 ring-[#82163b]'
+                        ? 'border-[#0f254e] bg-[#eff6ff]/60 ring-1 ring-[#0f254e]'
                         : 'border-stone-200 hover:border-stone-300'
                     }`}
                   >
-                    <CreditCard className="w-5 h-5 text-[#82163b]" />
+                    <CreditCard className="w-5 h-5 text-[#0f254e]" />
                     <span className="text-xs font-bold text-stone-900">Credit / Debit Card</span>
                     <span className="text-[11px] text-stone-500">Visa, Mastercard, Amex</span>
                   </button>
@@ -310,11 +310,11 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                     onClick={() => setFormData({ ...formData, paymentMethod: 'wire_transfer' })}
                     className={`p-4 rounded-xl border flex flex-col items-center justify-center text-center gap-2 transition-all cursor-pointer ${
                       formData.paymentMethod === 'wire_transfer'
-                        ? 'border-[#82163b] bg-[#fae8ee]/60 ring-1 ring-[#82163b]'
+                        ? 'border-[#0f254e] bg-[#eff6ff]/60 ring-1 ring-[#0f254e]'
                         : 'border-stone-200 hover:border-stone-300'
                     }`}
                   >
-                    <Building2 className="w-5 h-5 text-[#82163b]" />
+                    <Building2 className="w-5 h-5 text-[#0f254e]" />
                     <span className="text-xs font-bold text-stone-900">Bank Wire / Invoice</span>
                     <span className="text-[11px] text-stone-500">Pro-forma invoice</span>
                   </button>
@@ -324,11 +324,11 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                     onClick={() => setFormData({ ...formData, paymentMethod: 'mobile_money' })}
                     className={`p-4 rounded-xl border flex flex-col items-center justify-center text-center gap-2 transition-all cursor-pointer ${
                       formData.paymentMethod === 'mobile_money'
-                        ? 'border-[#82163b] bg-[#fae8ee]/60 ring-1 ring-[#82163b]'
+                        ? 'border-[#0f254e] bg-[#eff6ff]/60 ring-1 ring-[#0f254e]'
                         : 'border-stone-200 hover:border-stone-300'
                     }`}
                   >
-                    <Smartphone className="w-5 h-5 text-[#82163b]" />
+                    <Smartphone className="w-5 h-5 text-[#0f254e]" />
                     <span className="text-xs font-bold text-stone-900">Mobile Money</span>
                     <span className="text-[11px] text-stone-500">MTN, Telecel, M-Pesa</span>
                   </button>
@@ -394,7 +394,7 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                 <button
                   type="submit"
                   disabled={loading}
-                  className="px-8 py-3 text-sm font-bold text-white bg-[#82163b] hover:bg-[#660f2c] rounded-full shadow-lg transition-all cursor-pointer disabled:opacity-50"
+                  className="px-8 py-3 text-sm font-bold text-white bg-[#0f254e] hover:bg-[#0a1931] rounded-full shadow-lg transition-all cursor-pointer disabled:opacity-50"
                 >
                   {loading ? 'Confirming Registration...' : `Pay & Confirm USD $${currentPass.priceUSD}`}
                 </button>
@@ -421,10 +421,10 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
               </div>
 
               {/* Digital Pass Card */}
-              <div className="max-w-md mx-auto bg-gradient-to-br from-[#82163b] to-[#4e0821] text-white rounded-2xl p-6 shadow-xl border border-white/20 text-left relative overflow-hidden">
+              <div className="max-w-md mx-auto bg-gradient-to-br from-[#0f254e] to-[#060d1a] text-white rounded-2xl p-6 shadow-xl border border-white/20 text-left relative overflow-hidden">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <span className="text-[10px] font-bold tracking-widest uppercase text-[#fbcfe8]">
+                    <span className="text-[10px] font-bold tracking-widest uppercase text-[#93c5fd]">
                       OFFICIAL DELEGATE PASS
                     </span>
                     <h4 className="text-lg font-bold text-white leading-tight">
@@ -466,7 +466,7 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({
                 </button>
                 <button
                   onClick={onClose}
-                  className="w-full sm:w-auto px-8 py-2.5 text-xs font-bold text-white bg-[#82163b] hover:bg-[#660f2c] rounded-full transition-colors cursor-pointer"
+                  className="w-full sm:w-auto px-8 py-2.5 text-xs font-bold text-white bg-[#0f254e] hover:bg-[#0a1931] rounded-full transition-colors cursor-pointer"
                 >
                   Done
                 </button>

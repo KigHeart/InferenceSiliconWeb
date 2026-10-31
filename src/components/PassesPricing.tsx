@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { PASSES } from '../data/forumData';
 import { PassType } from '../types';
 
@@ -13,7 +13,7 @@ export const PassesPricing: React.FC<PassesPricingProps> = ({ onSelectPass }) =>
         
         {/* Kicker */}
         <div className="mb-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#82163b]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#0f254e]">
             PASSES AND PRICING
           </span>
         </div>
@@ -38,7 +38,7 @@ export const PassesPricing: React.FC<PassesPricingProps> = ({ onSelectPass }) =>
                 key={pass.id}
                 className={`rounded-2xl p-7 flex flex-col justify-between transition-all duration-200 ${
                   isFeatured
-                    ? 'bg-[#82163b] text-white shadow-xl ring-2 ring-[#a3224e] relative transform lg:-translate-y-2'
+                    ? 'bg-[#0f254e] text-white shadow-xl ring-2 ring-[#1d4ed8] relative transform lg:-translate-y-2'
                     : 'bg-white text-stone-900 border border-stone-200/90 shadow-xs hover:shadow-md'
                 }`}
               >
@@ -51,7 +51,7 @@ export const PassesPricing: React.FC<PassesPricingProps> = ({ onSelectPass }) =>
                     </h3>
                     
                     {pass.badge && (
-                      <span className="px-2.5 py-0.5 text-[10px] font-black tracking-wider uppercase bg-[#a3224e] text-white rounded-full border border-white/20 whitespace-nowrap">
+                      <span className="px-2.5 py-0.5 text-[10px] font-black tracking-wider uppercase bg-[#1d4ed8] text-white rounded-full border border-white/20 whitespace-nowrap">
                         {pass.badge}
                       </span>
                     )}
@@ -62,7 +62,7 @@ export const PassesPricing: React.FC<PassesPricingProps> = ({ onSelectPass }) =>
                     <div className="text-2xl sm:text-3xl font-extrabold font-mono-numbers tracking-tight">
                       USD {pass.priceUSD.toLocaleString()}
                     </div>
-                    <div className={`text-xs font-medium ${isFeatured ? 'text-[#fbcfe8]' : 'text-stone-500'}`}>
+                    <div className={`text-xs font-medium ${isFeatured ? 'text-[#93c5fd]' : 'text-stone-500'}`}>
                       {pass.rateLabel}
                     </div>
                   </div>
@@ -82,8 +82,8 @@ export const PassesPricing: React.FC<PassesPricingProps> = ({ onSelectPass }) =>
                     onClick={() => onSelectPass(pass.id)}
                     className={`w-full py-2.5 px-4 text-xs font-semibold rounded-full transition-all cursor-pointer text-center ${
                       isFeatured
-                        ? 'bg-white text-[#82163b] hover:bg-[#fff0f4] shadow-md hover:shadow-lg'
-                        : 'bg-transparent text-stone-800 border border-stone-300 hover:border-[#82163b] hover:text-[#82163b] hover:bg-[#fae8ee]/40'
+                        ? 'bg-white text-[#0f254e] hover:bg-[#eff6ff] shadow-md hover:shadow-lg'
+                        : 'bg-transparent text-stone-800 border border-stone-300 hover:border-[#0f254e] hover:text-[#0f254e] hover:bg-[#eff6ff]/40'
                     }`}
                   >
                     {pass.ctaText}

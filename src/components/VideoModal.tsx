@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { X, Play, Pause, Volume2, VolumeX, Maximize2, Sparkles, Film } from 'lucide-react';
 
 interface VideoModalProps {
@@ -19,10 +19,10 @@ export const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, posterI
       <div className="relative w-full max-w-4xl bg-stone-950 text-white rounded-3xl shadow-2xl border border-white/20 overflow-hidden my-6 text-left animate-fadeIn">
         
         {/* Header */}
-        <div className="bg-[#82163b] px-6 py-4 flex items-center justify-between">
+        <div className="bg-[#0f254e] px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-white/10 rounded-xl">
-              <Film className="w-5 h-5 text-[#fbcfe8]" />
+              <Film className="w-5 h-5 text-[#93c5fd]" />
             </div>
             <div>
               <h3 className="text-base font-bold text-white leading-tight">
@@ -61,7 +61,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, posterI
             onClick={() => setIsPlaying(!isPlaying)}
             className="absolute inset-0 flex items-center justify-center cursor-pointer"
           >
-            <div className={`w-20 h-20 rounded-full bg-[#82163b]/90 hover:bg-[#82163b] text-white flex items-center justify-center shadow-2xl border-2 border-white/40 transform transition-all hover:scale-110 ${isPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`}>
+            <div className={`w-20 h-20 rounded-full bg-[#0f254e]/90 hover:bg-[#0f254e] text-white flex items-center justify-center shadow-2xl border-2 border-white/40 transform transition-all hover:scale-110 ${isPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`}>
               {isPlaying ? <Pause className="w-8 h-8 fill-white" /> : <Play className="w-8 h-8 fill-white ml-1" />}
             </div>
           </button>
@@ -69,7 +69,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, posterI
           {/* On-screen Title Overlay */}
           <div className="absolute top-6 left-6 right-6 flex items-start justify-between pointer-events-none">
             <div className="bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 text-xs font-semibold text-white flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#f43f5e] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#38bdf8] animate-pulse" />
               <span>Official Keynote Preview · 4K UHD</span>
             </div>
 
@@ -92,7 +92,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, posterI
               className="w-full h-1.5 bg-white/20 hover:h-2.5 rounded-full cursor-pointer relative transition-all"
             >
               <div 
-                className="h-full bg-gradient-to-r from-[#e11d48] to-[#f43f5e] rounded-full relative"
+                className="h-full bg-gradient-to-r from-[#1d4ed8] to-[#38bdf8] rounded-full relative"
                 style={{ width: `${progress}%` }}
               >
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-white rounded-full shadow-md transform scale-0 group-hover:scale-100 transition-transform" />
