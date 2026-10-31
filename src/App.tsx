@@ -152,18 +152,14 @@ export default function App() {
         posterImage={heroPhotoUrl}
       />
 
-      {/* Floating Download ZIP Button for 1-Click Browser Export */}
       <div className="fixed bottom-6 right-6 z-40">
         <a
-          href="/inference-silicon-forum.zip"
-          download="inference-silicon-forum.zip"
           className="inline-flex items-center gap-2.5 px-4 py-2.5 bg-stone-900/95 hover:bg-[#82163b] text-white rounded-full shadow-2xl border border-white/20 backdrop-blur-md text-xs font-bold hover:scale-105 transition-all group"
           title="Download latest updated ZIP for GitHub deployment"
         >
           <div className="w-5 h-5 rounded-full bg-white/20 text-white flex items-center justify-center">
             <Download className="w-3 h-3 text-white" />
           </div>
-          <span>Download Website ZIP</span>
         </a>
       </div>
 
