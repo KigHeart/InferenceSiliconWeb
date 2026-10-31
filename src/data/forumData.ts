@@ -21,7 +21,7 @@ export const FORUM_CONFIG = {
       contact: 'yeqoen@outlook.com'
     },
     {
-      name: 'Dr. Dr. Michael Apasiku',
+      name: 'Dr. Michael Apasiku',
       role: 'Nelix Chip Design',
       bio: 'Pioneering ASIC architect and founder driving custom edge-AI silicon architectures, RISC-V compute engines and semiconductor IP development.',
       org: 'Nelix Chip Design',
@@ -192,7 +192,7 @@ export const PROGRAMME_DAYS: DayProgramme[] = [
         description: 'From training clusters to edge inference: why model execution economics govern the next decade of technology and where capital must flow.',
         speakers: [
           { name: 'Kiprop Yego', role: 'Chairman', company: 'Tilil Engineering Group' },
-          { name: 'Dr. Dr. Michael Apasiku', role: 'Chief Architect', company: 'Nelix Chip Design' }
+          { name: 'Dr. Michael Apasiku', role: 'Chief Architect', company: 'Nelix Chip Design' }
         ],
         location: 'Auditorium Magna'
       },
@@ -347,7 +347,7 @@ export const ATTENDEE_SPOTLIGHTS: AttendeeSpotlight[] = [
   },
   {
     id: 'michael-apasiku',
-    name: 'Dr. Dr. Michael Apasiku',
+    name: 'Dr. Michael Apasiku',
     title: 'Chief Silicon Architect',
     company: 'Nelix Chip Design',
     category: 'Architect',

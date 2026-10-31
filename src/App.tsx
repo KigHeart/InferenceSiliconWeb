@@ -80,7 +80,7 @@ export default function App() {
           onOpenVideo={() => setIsVideoOpen(true)}
         />
 
-        {/* 3. Convened By Bar (Kiprop Yego & Dr. Dr. Michael Apasiku) */}
+        {/* 3. Convened By Bar (Kiprop Yego & Dr. Michael Apasiku) */}
         <Conveners />
 
         {/* 4. Why This Forum, And Why Now (Editorial 2-column thesis) */}
