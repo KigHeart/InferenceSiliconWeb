@@ -1,10 +1,9 @@
-﻿/**
+/**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
 
 import React, { useState } from 'react';
-import { Download } from 'lucide-react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Conveners } from './components/Conveners';
@@ -23,6 +22,7 @@ import { PartnerModal } from './components/PartnerModal';
 import { FullProgrammeModal } from './components/FullProgrammeModal';
 import { VenueFaqModal } from './components/VenueFaqModal';
 import { VideoModal } from './components/VideoModal';
+import { GeminiChatbot } from './components/GeminiChatbot';
 
 import { PassType } from './types';
 import heroPhotoUrl from './assets/images/hero_silicon_inference_1793309657830.jpg';
@@ -62,7 +62,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf7f7] text-[#1c1917] flex flex-col font-sans selection:bg-[#0f254e] selection:text-white">
+    <div className="min-h-screen bg-[#faf7f7] text-[#1c1917] flex flex-col font-sans selection:bg-[#1e3a8a] selection:text-white">
       
       {/* 1. Header (Sticky navigation, logo, register CTA) */}
       <Header
@@ -152,16 +152,11 @@ export default function App() {
         posterImage={heroPhotoUrl}
       />
 
-      <div className="fixed bottom-6 right-6 z-40">
-        <a
-          className="inline-flex items-center gap-2.5 px-4 py-2.5 bg-stone-900/95 hover:bg-[#0f254e] text-white rounded-full shadow-2xl border border-white/20 backdrop-blur-md text-xs font-bold hover:scale-105 transition-all group"
-          title="Download latest updated ZIP for GitHub deployment"
-        >
-          <div className="w-5 h-5 rounded-full bg-white/20 text-white flex items-center justify-center">
-            <Download className="w-3 h-3 text-white" />
-          </div>
-        </a>
-      </div>
+      {/* Floating Gemini AI Intelligence Chatbot with Google Search Grounding */}
+      <GeminiChatbot
+        onOpenRegister={() => handleOpenRegister('investor')}
+        onOpenProgramme={() => handleOpenProgramme(0)}
+      />
 
     </div>
   );

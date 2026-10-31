@@ -1,4 +1,4 @@
-﻿import { PassInfo, DayProgramme, AttendeeSpotlight } from '../types';
+import { PassInfo, DayProgramme, AttendeeSpotlight } from '../types';
 
 export const FORUM_CONFIG = {
   title: 'ADVANCED INFERENCE SILICON INVESTORS FORUM',
@@ -341,7 +341,7 @@ export const ATTENDEE_SPOTLIGHTS: AttendeeSpotlight[] = [
     location: 'Kapsabet, Kenya',
     bio: 'Guiding regional semiconductor packaging ventures, microgrid compute deployment, and industrial sovereign tech policy across Sub-Saharan Africa.',
     initials: 'KY',
-    accentColor: '#0f254e',
+    accentColor: '#1e3a8a',
     keyTopics: ['Sovereign Silicon Strategy', 'Packaging & Test Pilot Lines', 'Industrial Capital'],
     dealRoomParticipant: true,
   },

@@ -1,6 +1,8 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { X, Handshake, CheckCircle, ArrowRight } from 'lucide-react';
 import { PartnerEnquiry } from '../types';
+import { doc, setDoc } from 'firebase/firestore';
+import { db } from '../firebase';
 
 interface PartnerModalProps {
   isOpen: boolean;
@@ -43,7 +45,17 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({
       submittedAt: new Date().toISOString(),
     };
 
+    const partnerId = `PE-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+
     try {
+      // 1. Direct Firestore persistent write
+      await setDoc(doc(db, 'partners', partnerId), enquiry);
+    } catch (fsErr) {
+      console.warn('Firestore partner write fallback:', fsErr);
+    }
+
+    try {
+      // 2. Send to Express API if available
       await fetch('/api/partner', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -93,7 +105,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({
               </p>
               <button
                 onClick={onClose}
-                className="mt-4 px-8 py-2.5 text-xs font-bold text-white bg-[#0f254e] hover:bg-[#0a1931] rounded-full transition-colors cursor-pointer"
+                className="mt-4 px-8 py-2.5 text-xs font-bold text-white bg-[#1e3a8a] hover:bg-[#0f254e] rounded-full transition-colors cursor-pointer"
               >
                 Close
               </button>
@@ -119,7 +131,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({
                       onClick={() => setTier(p.id as any)}
                       className={`p-2.5 rounded-xl border text-xs font-bold text-center transition-all cursor-pointer ${
                         tier === p.id
-                          ? 'border-[#0f254e] bg-[#eff6ff] text-[#0f254e] ring-1 ring-[#0f254e]'
+                          ? 'border-[#1d4ed8] bg-[#eff6ff] text-[#1e3a8a] ring-1 ring-[#1d4ed8]'
                           : 'border-stone-200 text-stone-700 hover:border-stone-300'
                       }`}
                     >
@@ -140,7 +152,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({
                     placeholder="e.g. Continental Foundry Co."
                     value={formData.companyName}
                     onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                    className="w-full px-3.5 py-2 rounded-xl border border-stone-300 focus:border-[#0f254e] focus:ring-1 focus:ring-[#0f254e] text-sm outline-none"
+                    className="w-full px-3.5 py-2 rounded-xl border border-stone-300 focus:border-[#1d4ed8] focus:ring-1 focus:ring-[#1d4ed8] text-sm outline-none"
                   />
                 </div>
 
@@ -154,7 +166,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({
                     placeholder="e.g. Dr. Ama Serwaa"
                     value={formData.contactName}
                     onChange={(e) => setFormData({ ...formData, contactName: e.target.value })}
-                    className="w-full px-3.5 py-2 rounded-xl border border-stone-300 focus:border-[#0f254e] focus:ring-1 focus:ring-[#0f254e] text-sm outline-none"
+                    className="w-full px-3.5 py-2 rounded-xl border border-stone-300 focus:border-[#1d4ed8] focus:ring-1 focus:ring-[#1d4ed8] text-sm outline-none"
                   />
                 </div>
 
@@ -168,7 +180,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({
                     placeholder="partnerships@foundry.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-3.5 py-2 rounded-xl border border-stone-300 focus:border-[#0f254e] focus:ring-1 focus:ring-[#0f254e] text-sm outline-none"
+                    className="w-full px-3.5 py-2 rounded-xl border border-stone-300 focus:border-[#1d4ed8] focus:ring-1 focus:ring-[#1d4ed8] text-sm outline-none"
                   />
                 </div>
 
@@ -181,7 +193,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({
                     placeholder="+233 ... or USA, UK, Kenya"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-3.5 py-2 rounded-xl border border-stone-300 focus:border-[#0f254e] focus:ring-1 focus:ring-[#0f254e] text-sm outline-none"
+                    className="w-full px-3.5 py-2 rounded-xl border border-stone-300 focus:border-[#1d4ed8] focus:ring-1 focus:ring-[#1d4ed8] text-sm outline-none"
                   />
                 </div>
               </div>
@@ -195,7 +207,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({
                   placeholder="Tell us about your brand goals, exhibition booth requirements, or speaking interests..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-3.5 py-2 rounded-xl border border-stone-300 focus:border-[#0f254e] focus:ring-1 focus:ring-[#0f254e] text-sm outline-none"
+                  className="w-full px-3.5 py-2 rounded-xl border border-stone-300 focus:border-[#1d4ed8] focus:ring-1 focus:ring-[#1d4ed8] text-sm outline-none"
                 />
               </div>
 
@@ -210,7 +222,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({
                 <button
                   type="submit"
                   disabled={loading}
-                  className="px-7 py-2.5 text-sm font-bold text-white bg-[#0f254e] hover:bg-[#0a1931] rounded-full shadow-md hover:shadow-lg transition-all flex items-center gap-2 cursor-pointer disabled:opacity-50"
+                  className="px-7 py-2.5 text-sm font-bold text-white bg-[#1e3a8a] hover:bg-[#0f254e] rounded-full shadow-md hover:shadow-lg transition-all flex items-center gap-2 cursor-pointer disabled:opacity-50"
                 >
                   <span>{loading ? 'Submitting...' : 'Submit Partnership Enquiry'}</span>
                   <ArrowRight className="w-4 h-4" />

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { PASSES } from '../data/forumData';
 import { PassType } from '../types';
 
@@ -13,7 +13,7 @@ export const PassesPricing: React.FC<PassesPricingProps> = ({ onSelectPass }) =>
         
         {/* Kicker */}
         <div className="mb-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#0f254e]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#1d4ed8]">
             PASSES AND PRICING
           </span>
         </div>
@@ -83,7 +83,7 @@ export const PassesPricing: React.FC<PassesPricingProps> = ({ onSelectPass }) =>
                     className={`w-full py-2.5 px-4 text-xs font-semibold rounded-full transition-all cursor-pointer text-center ${
                       isFeatured
                         ? 'bg-white text-[#0f254e] hover:bg-[#eff6ff] shadow-md hover:shadow-lg'
-                        : 'bg-transparent text-stone-800 border border-stone-300 hover:border-[#0f254e] hover:text-[#0f254e] hover:bg-[#eff6ff]/40'
+                        : 'bg-transparent text-stone-800 border border-stone-300 hover:border-[#1d4ed8] hover:text-[#1d4ed8] hover:bg-blue-50/50'
                     }`}
                   >
                     {pass.ctaText}

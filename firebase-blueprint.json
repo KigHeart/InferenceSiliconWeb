@@ -1,0 +1,64 @@
+{
+  "entities": {
+    "Registration": {
+      "title": "Registration",
+      "description": "Accra Forum delegate registration submission",
+      "type": "object",
+      "properties": {
+        "passType": { "type": "string", "maxLength": 50 },
+        "passName": { "type": "string", "maxLength": 100 },
+        "amountUSD": { "type": "number" },
+        "fullName": { "type": "string", "maxLength": 120 },
+        "email": { "type": "string", "format": "email", "maxLength": 150 },
+        "organization": { "type": "string", "maxLength": 150 },
+        "jobTitle": { "type": "string", "maxLength": 120 },
+        "country": { "type": "string", "maxLength": 100 },
+        "phone": { "type": "string", "maxLength": 50 },
+        "dietaryOrAccessibility": { "type": "string", "maxLength": 500 },
+        "paymentMethod": { "type": "string", "maxLength": 50 },
+        "paymentStatus": { "type": "string", "maxLength": 50 },
+        "registrationCode": { "type": "string", "maxLength": 50 },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["passType", "amountUSD", "fullName", "email", "organization", "registrationCode"]
+    },
+    "PartnerEnquiry": {
+      "title": "PartnerEnquiry",
+      "description": "Sponsorship and partnership enquiry submission",
+      "type": "object",
+      "properties": {
+        "tier": { "type": "string", "maxLength": 50 },
+        "companyName": { "type": "string", "maxLength": 150 },
+        "contactName": { "type": "string", "maxLength": 120 },
+        "email": { "type": "string", "format": "email", "maxLength": 150 },
+        "phone": { "type": "string", "maxLength": 50 },
+        "country": { "type": "string", "maxLength": 100 },
+        "message": { "type": "string", "maxLength": 1000 },
+        "submittedAt": { "type": "string" }
+      },
+      "required": ["companyName", "contactName", "email"]
+    },
+    "TestConnection": {
+      "title": "TestConnection",
+      "description": "Diagnostic document used to verify Firestore connectivity on app boot",
+      "type": "object",
+      "properties": {
+        "status": { "type": "string", "maxLength": 50 }
+      }
+    }
+  },
+  "firestore": {
+    "/registrations/{registrationId}": {
+      "schema": "Registration",
+      "description": "Stores delegate pass orders and confirmed attendee records"
+    },
+    "/partners/{partnerId}": {
+      "schema": "PartnerEnquiry",
+      "description": "Stores sponsorship inquiries from organizations"
+    },
+    "/test/{docId}": {
+      "schema": "TestConnection",
+      "description": "Test collection for boot connectivity check"
+    }
+  }
+}

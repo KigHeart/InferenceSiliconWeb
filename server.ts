@@ -3,6 +3,7 @@ import path from 'path';
 import fs from 'fs';
 import JSZip from 'jszip';
 import { fileURLToPath } from 'url';
+import { GoogleGenAI } from '@google/genai';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -11,6 +12,16 @@ const app = express();
 const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 
 app.use(express.json());
+
+// Server-side Gemini client with official telemetry header
+const ai = new GoogleGenAI({
+  apiKey: process.env.GEMINI_API_KEY,
+  httpOptions: {
+    headers: {
+      'User-Agent': 'aistudio-build',
+    },
+  },
+});
 
 // In-memory store for registrations and partnership enquiries
 interface RegistrationRecord {
@@ -127,7 +138,72 @@ app.post('/api/partner', (req: Request, res: Response) => {
   });
 });
 
-// 5. Download complete codebase ZIP
+// 5. Multi-turn Gemini Chatbot with Google Search Grounding
+app.post('/api/chat', async (req: Request, res: Response) => {
+  try {
+    const { messages, message } = req.body;
+
+    let promptContents: any[] = [];
+
+    if (Array.isArray(messages) && messages.length > 0) {
+      promptContents = messages.map((m: { role: string; content: string }) => ({
+        role: m.role === 'assistant' ? 'model' : 'user',
+        parts: [{ text: m.content }],
+      }));
+    } else if (typeof message === 'string' && message.trim()) {
+      promptContents = [{ role: 'user', parts: [{ text: message }] }];
+    } else {
+      return res.status(400).json({ error: 'Message or messages array is required.' });
+    }
+
+    const systemInstruction = `You are the official AI Intelligence Concierge for the Advanced Inference Silicon Investors Forum (Accra 2027, 3–5 March 2027).
+Your role is to assist sovereign investors, semiconductor architects, hardware founders, and delegates.
+Key Forum Facts:
+- Conveners: Kiprop Yego (Chairman, Tilil Engineering Group) and Dr. Michael Apasiku (Chief Architect, Nelix Chip Design).
+- Edition & Location: 1st Edition, Accra, Ghana (3–5 March 2027) at the Accra International Conference Centre (AICC) and Labadi Beach Hotel Grand Ballroom.
+- Core Thesis: "Inference is decided by silicon. Africa has what silicon needs." Focus on AI inference hardware economics, low-bit quantization (INT4/FP4), custom RISC-V extensions, and fabless design.
+- Africa's Resource Advantage: Upstream critical minerals (copper, cobalt, manganese, lithium, tantalum), clean energy baseload (geothermal, hydro, solar for green datacenters), youthful demographic, and diverse linguistic datasets for edge inference.
+- Passes & Pricing: Day Pass ($150), Delegate Pass ($450 early-bird until 15 Jan 2027, standard $550), Investor Pass Full Access ($1,200 early-bird, standard $1,500), Institutional Table ($5,000 early-bird, standard $6,000).
+- Program Tracks: Day 1 (Inference, Architecture & Fabless Design), Day 2 (Africa's Resource Advantage & Building Silicon), Day 3 (Deal Room, Accra Declaration & Gala Dinner).
+- Official Network: LinkedIn, X (@InferenceSilicon), GitHub, and YouTube.
+- When delegates ask about recent AI hardware, chiplet technology, or semiconductor industry market trends, utilize Google Search grounding to deliver accurate, up-to-date facts with grounded references.
+Keep answers professional, elegant, concise, and executive-ready.`;
+
+    const response = await ai.models.generateContent({
+      model: 'gemini-3.8-flash',
+      contents: promptContents,
+      config: {
+        systemInstruction,
+        tools: [{ googleSearch: {} }],
+      },
+    });
+
+    const reply = response.text || 'I apologize, but I could not formulate a response at this moment. Please check your query or contact the forum secretariat.';
+    const groundingChunks = response.candidates?.[0]?.groundingMetadata?.groundingChunks || [];
+    const searchQueries = response.candidates?.[0]?.groundingMetadata?.webSearchQueries || [];
+
+    const sources = groundingChunks
+      .filter((c: any) => c.web?.uri)
+      .map((c: any) => ({
+        title: c.web.title || c.web.uri,
+        uri: c.web.uri,
+      }));
+
+    res.json({
+      reply,
+      sources,
+      searchQueries,
+    });
+  } catch (error: any) {
+    console.error('Gemini Chat API error:', error);
+    res.status(500).json({
+      error: 'Failed to process chat query with Gemini API.',
+      details: error?.message || String(error),
+    });
+  }
+});
+
+// 6. Download complete codebase ZIP
 app.get(['/inference-silicon-forum.zip', '/api/download-zip'], async (_req: Request, res: Response) => {
   try {
     const zipPath = path.join(__dirname, 'inference-silicon-forum.zip');

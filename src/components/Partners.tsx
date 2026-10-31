@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Sparkles, Handshake, Cpu } from 'lucide-react';
 
 interface PartnersProps {
@@ -12,7 +12,7 @@ export const Partners: React.FC<PartnersProps> = ({ onOpenPartnerModal }) => {
         
         {/* Section Kicker */}
         <div className="mb-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#0f254e]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#1d4ed8]">
             OUR PARTNERS
           </span>
         </div>
@@ -25,7 +25,7 @@ export const Partners: React.FC<PartnersProps> = ({ onOpenPartnerModal }) => {
 
           <button
             onClick={() => onOpenPartnerModal('custom')}
-            className="px-6 py-2.5 text-sm font-semibold text-white bg-[#0f254e] hover:bg-[#0a1931] rounded-full shadow-md hover:shadow-lg transition-all self-start sm:self-auto cursor-pointer"
+            className="px-6 py-2.5 text-sm font-semibold text-white bg-[#1e3a8a] hover:bg-[#0f254e] rounded-full shadow-md hover:shadow-lg transition-all self-start sm:self-auto cursor-pointer"
           >
             Become a partner
           </button>
@@ -40,8 +40,8 @@ export const Partners: React.FC<PartnersProps> = ({ onOpenPartnerModal }) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             
             {/* Tilil Engineering Group */}
-            <div className="bg-white rounded-xl p-6 border border-stone-200/90 shadow-2xs flex items-center gap-4 hover:border-[#0f254e]/30 transition-all">
-              <div className="w-12 h-12 rounded-lg bg-[#eff6ff] text-[#0f254e] flex items-center justify-center font-black text-xl tracking-tighter">
+            <div className="bg-white rounded-xl p-6 border border-stone-200/90 shadow-2xs flex items-center gap-4 hover:border-[#1d4ed8]/40 transition-all">
+              <div className="w-12 h-12 rounded-lg bg-[#dbeafe] text-[#1e3a8a] flex items-center justify-center font-black text-xl tracking-tighter">
                 †¡L!L
               </div>
               <div>
@@ -55,9 +55,9 @@ export const Partners: React.FC<PartnersProps> = ({ onOpenPartnerModal }) => {
             </div>
 
             {/* Nelix Chip Design */}
-            <div className="bg-white rounded-xl p-6 border border-stone-200/90 shadow-2xs flex items-center gap-4 hover:border-[#0f254e]/30 transition-all">
-              <div className="w-12 h-12 rounded-lg bg-[#eff6ff] text-[#0f254e] flex items-center justify-center font-bold text-lg">
-                <Cpu className="w-6 h-6 text-[#0f254e]" />
+            <div className="bg-white rounded-xl p-6 border border-stone-200/90 shadow-2xs flex items-center gap-4 hover:border-[#1d4ed8]/40 transition-all">
+              <div className="w-12 h-12 rounded-lg bg-[#dbeafe] text-[#1e3a8a] flex items-center justify-center font-bold text-lg">
+                <Cpu className="w-6 h-6 text-[#1e3a8a]" />
               </div>
               <div>
                 <div className="text-lg font-bold text-stone-900 leading-tight">
@@ -78,13 +78,13 @@ export const Partners: React.FC<PartnersProps> = ({ onOpenPartnerModal }) => {
             HEADLINE PARTNER
           </div>
 
-          <div className="bg-white/80 rounded-xl p-7 border-2 border-dashed border-stone-300 text-center flex flex-col sm:flex-row items-center justify-center gap-2 hover:border-[#0f254e] hover:bg-white transition-all">
+          <div className="bg-white/90 rounded-xl p-7 border-2 border-dashed border-stone-300 text-center flex flex-col sm:flex-row items-center justify-center gap-2 hover:border-[#1d4ed8] hover:bg-white transition-all">
             <span className="text-sm sm:text-base text-stone-700">
               Open: naming rights and the opening keynote slot.
             </span>
             <button
               onClick={() => onOpenPartnerModal('headline')}
-              className="text-sm sm:text-base font-bold text-[#0f254e] hover:underline cursor-pointer"
+              className="text-sm sm:text-base font-bold text-[#1d4ed8] hover:underline cursor-pointer"
             >
               Enquire
             </button>
@@ -101,7 +101,7 @@ export const Partners: React.FC<PartnersProps> = ({ onOpenPartnerModal }) => {
             </div>
             <button
               onClick={() => onOpenPartnerModal('platinum')}
-              className="w-full bg-white/80 rounded-xl py-8 px-4 border-2 border-dashed border-stone-300 text-center text-sm font-medium text-stone-500 hover:text-[#0f254e] hover:border-[#0f254e] hover:bg-white transition-all cursor-pointer block"
+              className="w-full bg-white/90 rounded-xl py-8 px-4 border-2 border-dashed border-stone-300 text-center text-sm font-medium text-stone-500 hover:text-[#1d4ed8] hover:border-[#1d4ed8] hover:bg-white transition-all cursor-pointer block"
             >
               Open slot
             </button>
@@ -114,7 +114,7 @@ export const Partners: React.FC<PartnersProps> = ({ onOpenPartnerModal }) => {
             </div>
             <button
               onClick={() => onOpenPartnerModal('gold')}
-              className="w-full bg-white/80 rounded-xl py-8 px-4 border-2 border-dashed border-stone-300 text-center text-sm font-medium text-stone-500 hover:text-[#0f254e] hover:border-[#0f254e] hover:bg-white transition-all cursor-pointer block"
+              className="w-full bg-white/90 rounded-xl py-8 px-4 border-2 border-dashed border-stone-300 text-center text-sm font-medium text-stone-500 hover:text-[#1d4ed8] hover:border-[#1d4ed8] hover:bg-white transition-all cursor-pointer block"
             >
               Open slot
             </button>
@@ -127,7 +127,7 @@ export const Partners: React.FC<PartnersProps> = ({ onOpenPartnerModal }) => {
             </div>
             <button
               onClick={() => onOpenPartnerModal('exhibitor')}
-              className="w-full bg-white/80 rounded-xl py-8 px-4 border-2 border-dashed border-stone-300 text-center text-sm font-medium text-stone-500 hover:text-[#0f254e] hover:border-[#0f254e] hover:bg-white transition-all cursor-pointer block"
+              className="w-full bg-white/90 rounded-xl py-8 px-4 border-2 border-dashed border-stone-300 text-center text-sm font-medium text-stone-500 hover:text-[#1d4ed8] hover:border-[#1d4ed8] hover:bg-white transition-all cursor-pointer block"
             >
               Open slot
             </button>

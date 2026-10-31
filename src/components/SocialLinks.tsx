@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 interface SocialLinkItem {
   name: string;
@@ -72,7 +72,7 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({ layout = 'inline' }) =
             aria-label={item.ariaLabel}
             className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all group"
           >
-            <div className="p-2 rounded-lg bg-white/10 text-[#93c5fd] group-hover:text-white group-hover:bg-[#0f254e] transition-colors">
+            <div className="p-2 rounded-lg bg-white/10 text-[#93c5fd] group-hover:text-white group-hover:bg-[#1e3a8a] transition-colors">
               <item.icon className="w-4 h-4" />
             </div>
             <div className="text-left overflow-hidden">
@@ -99,7 +99,7 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({ layout = 'inline' }) =
           rel="noopener noreferrer"
           title={`${item.name} — ${item.handle}`}
           aria-label={item.ariaLabel}
-          className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#0f254e] text-stone-300 hover:text-white border border-white/10 hover:border-[#1d4ed8] flex items-center justify-center transition-all transform hover:-translate-y-0.5 shadow-2xs"
+          className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#1e3a8a] text-stone-300 hover:text-white border border-white/10 hover:border-[#3b82f6] flex items-center justify-center transition-all transform hover:-translate-y-0.5 shadow-2xs"
         >
           <item.icon className="w-4 h-4" />
         </a>

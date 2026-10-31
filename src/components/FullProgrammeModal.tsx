@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { X, Calendar, Clock, MapPin, User, ChevronRight, Download } from 'lucide-react';
 import { PROGRAMME_DAYS } from '../data/forumData';
 
@@ -81,7 +81,7 @@ ${d.sessions.map((s) => `[${s.time}] ${s.title}\nLocation: ${s.location}\n${s.de
               onClick={() => setActiveDayIdx(idx)}
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2.5 transition-all cursor-pointer whitespace-nowrap ${
                 activeDayIdx === idx
-                  ? 'bg-[#0f254e] text-white shadow-md'
+                  ? 'bg-[#1e3a8a] text-white shadow-md'
                   : 'bg-white/5 text-stone-400 hover:text-white hover:bg-white/10'
               }`}
             >
@@ -173,7 +173,7 @@ ${d.sessions.map((s) => `[${s.time}] ${s.title}\nLocation: ${s.location}\n${s.de
           </span>
           <button
             onClick={onClose}
-            className="px-6 py-2 text-xs font-bold text-white bg-[#0f254e] hover:bg-[#0a1931] rounded-full transition-colors cursor-pointer"
+            className="px-6 py-2 text-xs font-bold text-white bg-[#1e3a8a] hover:bg-[#0f254e] rounded-full transition-colors cursor-pointer"
           >
             Close Agenda
           </button>

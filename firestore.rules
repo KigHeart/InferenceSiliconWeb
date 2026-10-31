@@ -1,0 +1,67 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 1. Global Default-Deny Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Hardened Helper Primitives
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+    function incoming() {
+      return request.resource.data;
+    }
+    function existing() {
+      return resource.data;
+    }
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    function isAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == 'dejawoot99@gmail.com' ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    // Schema Validation Helpers
+    function isValidRegistration(data) {
+      return data.keys().hasAll(['passType', 'amountUSD', 'fullName', 'email', 'organization', 'registrationCode']) &&
+        data.passType is string && data.passType.size() <= 50 &&
+        data.amountUSD is number && data.amountUSD >= 0 &&
+        data.fullName is string && data.fullName.size() <= 120 &&
+        data.email is string && data.email.size() <= 150 &&
+        data.organization is string && data.organization.size() <= 150 &&
+        data.registrationCode is string && data.registrationCode.size() <= 50;
+    }
+
+    function isValidPartnerEnquiry(data) {
+      return data.keys().hasAll(['companyName', 'contactName', 'email']) &&
+        data.companyName is string && data.companyName.size() <= 150 &&
+        data.contactName is string && data.contactName.size() <= 120 &&
+        data.email is string && data.email.size() <= 150;
+    }
+
+    // Registrations collection
+    match /registrations/{registrationId} {
+      allow create: if isValidId(registrationId) && isValidRegistration(incoming());
+      allow get, list: if isAdmin();
+      allow update, delete: if isAdmin();
+    }
+
+    // Partner enquiries collection
+    match /partners/{partnerId} {
+      allow create: if isValidId(partnerId) && isValidPartnerEnquiry(incoming());
+      allow get, list: if isAdmin();
+      allow update, delete: if isAdmin();
+    }
+
+    // Diagnostic boot test document
+    match /test/{docId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+  }
+}

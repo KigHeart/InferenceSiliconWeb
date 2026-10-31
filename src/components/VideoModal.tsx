@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { X, Play, Pause, Volume2, VolumeX, Maximize2, Sparkles, Film } from 'lucide-react';
 
 interface VideoModalProps {
@@ -61,7 +61,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, posterI
             onClick={() => setIsPlaying(!isPlaying)}
             className="absolute inset-0 flex items-center justify-center cursor-pointer"
           >
-            <div className={`w-20 h-20 rounded-full bg-[#0f254e]/90 hover:bg-[#0f254e] text-white flex items-center justify-center shadow-2xl border-2 border-white/40 transform transition-all hover:scale-110 ${isPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`}>
+            <div className={`w-20 h-20 rounded-full bg-[#1e3a8a]/90 hover:bg-[#1e3a8a] text-white flex items-center justify-center shadow-2xl border-2 border-white/40 transform transition-all hover:scale-110 ${isPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`}>
               {isPlaying ? <Pause className="w-8 h-8 fill-white" /> : <Play className="w-8 h-8 fill-white ml-1" />}
             </div>
           </button>

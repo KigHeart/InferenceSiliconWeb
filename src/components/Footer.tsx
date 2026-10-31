@@ -1,5 +1,5 @@
-﻿import React from 'react';
-import { ArrowUp } from 'lucide-react';
+import React from 'react';
+import { ArrowUp, Download } from 'lucide-react';
 import { FORUM_CONFIG } from '../data/forumData';
 import { SocialLinks } from './SocialLinks';
 
@@ -21,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({
   };
 
   return (
-    <footer className="bg-[#161618] text-white pt-16 pb-12 border-t border-white/10">
+    <footer className="bg-[#070e1c] text-white pt-16 pb-12 border-t border-blue-950/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         
         {/* Main 4 Columns Grid */}
@@ -87,6 +87,16 @@ export const Footer: React.FC<FooterProps> = ({
                 >
                   Register
                 </button>
+              </li>
+              <li>
+                <a 
+                  href="/inference-silicon-forum.zip" 
+                  download="inference-silicon-forum.zip"
+                  className="text-blue-400 hover:text-white transition-colors cursor-pointer inline-flex items-center gap-1 font-medium text-xs pt-1"
+                >
+                  <span>Download Code ZIP</span>
+                  <Download className="w-3 h-3" />
+                </a>
               </li>
             </ul>
           </div>

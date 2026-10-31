@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { ArrowRight, Calendar } from 'lucide-react';
 import { PROGRAMME_DAYS } from '../data/forumData';
 
@@ -8,12 +8,12 @@ interface ProgrammeProps {
 
 export const Programme: React.FC<ProgrammeProps> = ({ onOpenFullProgramme }) => {
   return (
-    <section id="programme" className="py-20 lg:py-28 bg-[#161618] text-white">
+    <section id="programme" className="py-20 lg:py-28 bg-[#091122] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Kicker */}
         <div className="mb-4 text-left">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#e2829c]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#60a5fa]">
             THE PROGRAMME
           </span>
         </div>
@@ -26,10 +26,10 @@ export const Programme: React.FC<ProgrammeProps> = ({ onOpenFullProgramme }) => 
 
           <button
             onClick={() => onOpenFullProgramme(0)}
-            className="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-white/90 hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-all cursor-pointer group"
+            className="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-white/90 hover:text-white underline underline-offset-4 decoration-blue-400 hover:decoration-white transition-all cursor-pointer group"
           >
             <span>See the full programme</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-blue-400" />
           </button>
         </div>
 
@@ -38,15 +38,15 @@ export const Programme: React.FC<ProgrammeProps> = ({ onOpenFullProgramme }) => 
           {PROGRAMME_DAYS.map((day, idx) => (
             <div 
               key={idx}
-              className="bg-[#202024]/80 border border-white/10 rounded-2xl p-7 flex flex-col justify-between hover:border-white/20 transition-all group"
+              className="bg-[#0f1f3d]/90 border border-blue-900/60 rounded-2xl p-7 flex flex-col justify-between hover:border-blue-600/60 transition-all group shadow-xl"
             >
               <div>
                 {/* Date header */}
-                <div className="flex items-baseline gap-3 pb-6 border-b border-white/10 mb-6">
-                  <span className="text-4xl sm:text-5xl font-black text-[#f59e0b] font-mono-numbers">
+                <div className="flex items-baseline gap-3 pb-6 border-b border-blue-900/60 mb-6">
+                  <span className="text-4xl sm:text-5xl font-black text-[#38bdf8] font-mono-numbers">
                     {day.dayNumber}
                   </span>
-                  <span className="text-xs sm:text-sm font-bold tracking-wider uppercase text-white/70">
+                  <span className="text-xs sm:text-sm font-bold tracking-wider uppercase text-blue-200/80">
                     MARCH · {day.dayName}
                   </span>
                 </div>
@@ -55,7 +55,7 @@ export const Programme: React.FC<ProgrammeProps> = ({ onOpenFullProgramme }) => 
                 <div className="space-y-8">
                   {day.subThemes.map((sub, sIdx) => (
                     <div key={sIdx} className="space-y-2">
-                      <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-[#93c5fd] transition-colors">
+                      <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
                         {sub.title}
                       </h3>
                       <p className="text-sm text-stone-300 leading-relaxed font-normal">

@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Handshake, MapPin, Sparkles, UserCheck, Pause, Play } from 'lucide-react';
 import { ATTENDEE_SPOTLIGHTS } from '../data/forumData';
 import { AttendeeSpotlight as AttendeeType } from '../types';
@@ -62,7 +62,7 @@ export const AttendeeSpotlight: React.FC<AttendeeSpotlightProps> = ({
         
         {/* Section Kicker */}
         <div className="mb-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#0f254e]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#1d4ed8]">
             ATTENDEE & SPEAKER SPOTLIGHT
           </span>
         </div>
@@ -93,7 +93,7 @@ export const AttendeeSpotlight: React.FC<AttendeeSpotlightProps> = ({
             <button
               onClick={handlePrev}
               aria-label="Previous attendee"
-              className="p-2.5 rounded-full border border-stone-200 text-stone-700 hover:text-white hover:bg-[#0f254e] hover:border-[#0f254e] transition-all cursor-pointer shadow-2xs"
+              className="p-2.5 rounded-full border border-stone-200 text-stone-700 hover:text-white hover:bg-[#1e3a8a] hover:border-[#1e3a8a] transition-all cursor-pointer shadow-2xs"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
@@ -102,7 +102,7 @@ export const AttendeeSpotlight: React.FC<AttendeeSpotlightProps> = ({
             <button
               onClick={handleNext}
               aria-label="Next attendee"
-              className="p-2.5 rounded-full border border-stone-200 text-stone-700 hover:text-white hover:bg-[#0f254e] hover:border-[#0f254e] transition-all cursor-pointer shadow-2xs"
+              className="p-2.5 rounded-full border border-stone-200 text-stone-700 hover:text-white hover:bg-[#1e3a8a] hover:border-[#1e3a8a] transition-all cursor-pointer shadow-2xs"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -144,7 +144,7 @@ export const AttendeeSpotlight: React.FC<AttendeeSpotlightProps> = ({
                   key={attendee.id}
                   className="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3"
                 >
-                  <div className="h-full bg-[#faf7f7] rounded-2xl p-7 border border-stone-200/90 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between group text-left">
+                  <div className="h-full bg-[#f8fafc] rounded-2xl p-7 border border-stone-200/90 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between group text-left">
                     
                     <div>
                       {/* Top Header: Category Tag & Deal Room Badge */}
@@ -154,7 +154,7 @@ export const AttendeeSpotlight: React.FC<AttendeeSpotlightProps> = ({
                         </span>
 
                         {attendee.dealRoomParticipant && (
-                          <span className="inline-flex items-center gap-1 text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded-full bg-[#eff6ff] text-[#0f254e] border border-[#dbeafe]">
+                          <span className="inline-flex items-center gap-1 text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded-full bg-blue-50 text-[#1d4ed8] border border-blue-200">
                             <Handshake className="w-3 h-3" />
                             <span>Deal Room</span>
                           </span>
@@ -165,13 +165,13 @@ export const AttendeeSpotlight: React.FC<AttendeeSpotlightProps> = ({
                       <div className="flex items-center gap-4 mb-4">
                         <div 
                           className="w-14 h-14 rounded-2xl flex items-center justify-center font-extrabold text-lg text-white shadow-sm shrink-0"
-                          style={{ backgroundColor: attendee.accentColor || '#0f254e' }}
+                          style={{ backgroundColor: attendee.accentColor || '#1e3a8a' }}
                         >
                           {attendee.initials}
                         </div>
 
                         <div>
-                          <h3 className="text-lg font-bold text-stone-900 tracking-tight group-hover:text-[#0f254e] transition-colors leading-snug">
+                          <h3 className="text-lg font-bold text-stone-900 tracking-tight group-hover:text-[#1d4ed8] transition-colors leading-snug">
                             {attendee.name}
                           </h3>
                           <div className="text-xs font-semibold text-stone-700">
@@ -211,7 +211,7 @@ export const AttendeeSpotlight: React.FC<AttendeeSpotlightProps> = ({
                     <div className="pt-4 border-t border-stone-200/80 flex items-center justify-between gap-2">
                       <button
                         onClick={() => onConnectAttendee(attendee)}
-                        className="text-xs font-bold text-[#0f254e] hover:text-[#0a1931] transition-colors cursor-pointer"
+                        className="text-xs font-bold text-[#1d4ed8] hover:text-[#0f254e] transition-colors cursor-pointer"
                       >
                         Schedule 1-to-1 Meeting
                       </button>
@@ -244,7 +244,7 @@ export const AttendeeSpotlight: React.FC<AttendeeSpotlightProps> = ({
                 aria-label={`Go to slide ${dotIdx + 1}`}
                 className={`h-2 rounded-full transition-all cursor-pointer ${
                   currentIndex === dotIdx
-                    ? 'w-6 bg-[#0f254e]'
+                    ? 'w-6 bg-[#1d4ed8]'
                     : 'w-2 bg-stone-300 hover:bg-stone-400'
                 }`}
               />

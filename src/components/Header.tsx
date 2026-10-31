@@ -1,5 +1,5 @@
-﻿import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useState } from 'react';
+import { Menu, X, Download } from 'lucide-react';
 
 interface HeaderProps {
   onOpenRegister: () => void;
@@ -16,15 +16,15 @@ export const Header: React.FC<HeaderProps> = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-[#0f254e] text-white border-b border-[#9c274d]/40 shadow-xs backdrop-blur-md">
+    <header className="sticky top-0 z-40 w-full bg-[#0a1931] text-white border-b border-blue-900/60 shadow-md backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 gap-8">
           
           {/* Zone 1: Logo & Brand Identity */}
           <a href="#" className="flex items-center gap-3.5 group text-left shrink-0">
             {/* Silicon Chip Emblem */}
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#9c2049] to-[#600f2a] border border-[#d6698b]/40 flex items-center justify-center p-1.5 shadow-inner group-hover:border-white/60 transition-colors">
-              <svg viewBox="0 0 40 40" className="w-full h-full stroke-white/90 fill-none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#1e3a8a] to-[#0f254e] border border-blue-500/40 flex items-center justify-center p-1.5 shadow-inner group-hover:border-blue-300 transition-colors">
+              <svg viewBox="0 0 40 40" className="w-full h-full stroke-white/95 fill-none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 {/* Outer pins */}
                 <path d="M12 4v4 M20 4v4 M28 4v4" />
                 <path d="M12 32v4 M20 32v4 M28 32v4" />
@@ -33,7 +33,7 @@ export const Header: React.FC<HeaderProps> = ({
                 {/* Chip Package */}
                 <rect x="8" y="8" width="24" height="24" rx="2" className="stroke-white" />
                 {/* Inner Core */}
-                <rect x="14" y="14" width="12" height="12" rx="1" className="fill-[#e2829c]/20 stroke-[#e2829c]" />
+                <rect x="14" y="14" width="12" height="12" rx="1" className="fill-blue-400/20 stroke-blue-300" />
                 <circle cx="20" cy="20" r="2" className="fill-white" />
               </svg>
             </div>
@@ -71,11 +71,21 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           </nav>
 
-          {/* Zone 3: Primary CTA (Register) */}
+          {/* Zone 3: Primary CTA (Register & Download Code ZIP) */}
           <div className="hidden sm:flex items-center gap-3 shrink-0">
+            <a
+              href="/inference-silicon-forum.zip"
+              download="inference-silicon-forum.zip"
+              title="Download complete codebase ZIP"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-blue-200 hover:text-white bg-blue-900/50 hover:bg-blue-800 border border-blue-700/60 rounded-full transition-colors cursor-pointer"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Download ZIP</span>
+            </a>
+
             <button
               onClick={onOpenRegister}
-              className="px-6 py-2.5 text-sm font-semibold text-[#0f254e] bg-white hover:bg-[#eff6ff] rounded-full shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5 cursor-pointer whitespace-nowrap"
+              className="px-6 py-2.5 text-sm font-semibold text-[#0a1931] bg-white hover:bg-blue-50 rounded-full shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5 cursor-pointer whitespace-nowrap"
             >
               Register
             </button>
@@ -83,9 +93,16 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 sm:hidden">
+            <a
+              href="/inference-silicon-forum.zip"
+              download="inference-silicon-forum.zip"
+              className="p-1.5 text-xs text-blue-200 bg-blue-900/50 rounded-full"
+            >
+              <Download className="w-4 h-4" />
+            </a>
             <button
               onClick={onOpenRegister}
-              className="px-4 py-1.5 text-xs font-semibold text-[#0f254e] bg-white rounded-full"
+              className="px-4 py-1.5 text-xs font-semibold text-[#0a1931] bg-white rounded-full"
             >
               Register
             </button>
@@ -103,7 +120,7 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="sm:hidden bg-[#6b102f] border-t border-white/10 px-4 pt-3 pb-5 space-y-3">
+        <div className="sm:hidden bg-[#0a1931] border-t border-blue-900/60 px-4 pt-3 pb-5 space-y-3">
           <button
             onClick={() => {
               setMobileMenuOpen(false);

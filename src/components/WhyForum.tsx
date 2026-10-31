@@ -1,13 +1,13 @@
-﻿import React from 'react';
+import React from 'react';
 
 export const WhyForum: React.FC = () => {
   return (
-    <section className="py-20 lg:py-28 bg-[#faf7f7]">
+    <section className="py-20 lg:py-28 bg-[#f8fafc]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Kicker */}
         <div className="mb-6 text-left">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#0f254e]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#1d4ed8]">
             WHY THIS FORUM, AND WHY NOW
           </span>
         </div>

@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Gem, Zap, Users, MessageSquareQuote, ChevronDown, ChevronUp } from 'lucide-react';
 import { AFRICA_ADVANTAGES } from '../data/forumData';
 
@@ -8,25 +8,25 @@ export const AfricaAdvantage: React.FC = () => {
   const getIcon = (id: string) => {
     switch (id) {
       case 'minerals':
-        return <Gem className="w-6 h-6 text-[#9c2049]" />;
+        return <Gem className="w-6 h-6 text-[#1d4ed8]" />;
       case 'power':
-        return <Zap className="w-6 h-6 text-[#9c2049]" />;
+        return <Zap className="w-6 h-6 text-[#1d4ed8]" />;
       case 'people':
-        return <Users className="w-6 h-6 text-[#9c2049]" />;
+        return <Users className="w-6 h-6 text-[#1d4ed8]" />;
       case 'languages':
-        return <MessageSquareQuote className="w-6 h-6 text-[#9c2049]" />;
+        return <MessageSquareQuote className="w-6 h-6 text-[#1d4ed8]" />;
       default:
-        return <Gem className="w-6 h-6 text-[#9c2049]" />;
+        return <Gem className="w-6 h-6 text-[#1d4ed8]" />;
     }
   };
 
   return (
-    <section className="py-12 pb-24 bg-[#faf7f7]">
+    <section className="py-12 pb-24 bg-[#f8fafc]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Kicker */}
         <div className="mb-8 text-left">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#0f254e]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#1d4ed8]">
             AFRICA’S ADVANTAGE
           </span>
         </div>
@@ -38,11 +38,11 @@ export const AfricaAdvantage: React.FC = () => {
             return (
               <div 
                 key={adv.id}
-                className="bg-white rounded-2xl p-7 border border-stone-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left group"
+                className="bg-white rounded-2xl p-7 border border-blue-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left group"
               >
                 <div>
                   {/* Icon */}
-                  <div className="w-12 h-12 rounded-xl bg-[#eff6ff] flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                     {getIcon(adv.id)}
                   </div>
 
@@ -68,7 +68,7 @@ export const AfricaAdvantage: React.FC = () => {
                 <div className="mt-6 pt-3">
                   <button
                     onClick={() => setExpandedId(isExpanded ? null : adv.id)}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0f254e] hover:text-[#0a1931] transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1d4ed8] hover:text-[#0f254e] transition-colors cursor-pointer"
                   >
                     <span>{isExpanded ? 'Less' : 'Learn more'}</span>
                     {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}

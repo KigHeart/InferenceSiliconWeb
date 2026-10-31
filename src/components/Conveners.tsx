@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { FORUM_CONFIG } from '../data/forumData';
 
 export const Conveners: React.FC = () => {
