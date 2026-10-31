@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowUp, Download } from 'lucide-react';
+﻿import React from 'react';
+import { ArrowUp } from 'lucide-react';
 import { FORUM_CONFIG } from '../data/forumData';
 import { SocialLinks } from './SocialLinks';
 
@@ -87,16 +87,6 @@ export const Footer: React.FC<FooterProps> = ({
                 >
                   Register
                 </button>
-              </li>
-              <li>
-                <a 
-                  href="/inference-silicon-forum.zip" 
-                  download="inference-silicon-forum.zip"
-                  className="text-blue-400 hover:text-white transition-colors cursor-pointer inline-flex items-center gap-1 font-medium text-xs pt-1"
-                >
-                  <span>Download Code ZIP</span>
-                  <Download className="w-3 h-3" />
-                </a>
               </li>
             </ul>
           </div>
